@@ -65,7 +65,28 @@ get stashed changes
 cmnd > git stash pop      
 Remove all stashed entries   
 cmnd > git stash clear	   
+To pick particluar commit 
+git cherry-pick commit_id
 
+# Trach changes 
+
+Track the changes that have not been staged   
+cmnd > git diff  
+Track the changes that have been staged but not commited  
+cmnd > git diff --staged  
+Track the changes after commiting  
+cmnd > git diff Head
+To check state of working directory and staging area  
+cmnd > git status
+To display Show object
+cmnd > git show
+
+# commit history
+
+logs  
+cmnd > git log  
+to check author of the code
+git blame file_name 
 # sharing and updating
 
 Pull changes from remote repository   
