@@ -34,3 +34,34 @@
  cmnd > git remote add origin https://github.com/profile_name/repo_name.git   
  cmnd > git push -u origin branch_name   
 
+# Branches 
+List branches (the asterisk denotes the current branch)    
+cmnd >  git branch	
+List all branches (local and remote)  
+cmnd > git branch -a	
+Create a new branch   
+git branch [branch name]	
+Delete a branch in local      
+cmnd >  git branch -d [branch name]	  
+Delete a remote branch   
+cmnd > git push origin --delete [branch name]  
+Create a new branch and switch to it   
+cmnd > git checkout -b [branch name]	  
+Clone a remote branch and switch to it   
+cmnd > git checkout -b [branch name] origin/[branch name]  
+Rename a local branch   
+cmnd > git branch -m [old branch name] [new branch name]   
+Switch to a branch    
+cmnd > git checkout [branch name]    
+Switch to the branch last checked out   
+cmnd > git checkout -       	
+Merge a branch into the active branch   
+cmnd > git merge [branch name]     
+Merge a branch into a target branch     
+cmnd > git merge [source branch] [target branch]    	
+Stash changes in a dirty working directory    
+cmnd > git stash	 
+get stashed changes  
+cmnd > git stash pop      
+Remove all stashed entries   
+cmnd > git stash clear	   
