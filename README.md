@@ -48,7 +48,7 @@ cmnd > git push origin --delete [branch name]
 Create a new branch and switch to it   
 cmnd > git checkout -b [branch name]  	  
 Clone a remote branch and switch to it   
-cmnd > git checkout -b [branch name] origin/[branch name]   
+cmnd > git checkout -b [branch name] origin/[branch name]     
 Rename a local branch   
 cmnd > git branch -m [old branch name] [new branch name]   
 Switch to a branch    
@@ -65,31 +65,37 @@ get stashed changes
 cmnd > git stash pop      
 Remove all stashed entries   
 cmnd > git stash clear	   
-To pick particluar commit 
-git cherry-pick commit_id
+To pick particluar commit   
+git cherry-pick commit_id    
 
 # Trach changes 
 
 Track the changes that have not been staged   
-cmnd > git diff  
-Track the changes that have been staged but not commited  
-cmnd > git diff --staged  
+cmnd > git diff    
+Track the changes that have been staged but not commited   
+cmnd > git diff --staged    
 Track the changes after commiting  
-cmnd > git diff Head
+cmnd > git diff Head  
 To check state of working directory and staging area  
-cmnd > git status
-To display Show object
-cmnd > git show
+cmnd > git status  
+To display Show object   
+cmnd > git show   
 
 # commit history
 
 logs  
 cmnd > git log  
 to check author of the code   
-git blame file_name 
+git blame file_name  
 # sharing and updating
 
-Pull changes from remote repository   
+sync up with remote  
+cmnd > git fetch master (changes will not be visible in pwd)   
+To see the above changes   
+cmnd > git diff master origin/master  
+To get the changes into pwd   
+cmnd> git merge   
+Pull changes from remote repository (pull = fetch + merge)   
 cmnd > git pull origin [branch name]	
 Push a branch to your remote repository     
 cmnd > git push origin [branch name]	 
@@ -97,13 +103,13 @@ Push changes to remote repository (and remember the branch)
 cmnd > git push -u origin [branch name]	   
 Push changes to remote repository (remembered branch)  
 cmnd > git push    	    
-Update local repository to the newest commit (remembered branch)     
+Update local repository to the newest commit (remembered branch)       
 cmnd > git pull    	
-Upstream and downstream 
-cmnd > git remote -v 
-cmnd > git push --set-upstream origin master
-rebase with latest commit
-cmnd > git rebase branch_name
+Upstream and downstream   
+cmnd > git remote -v   
+cmnd > git push --set-upstream origin master   
+rebase with latest commit   
+cmnd > git rebase branch_name  
  
 # Tags
 
@@ -128,7 +134,7 @@ cmnd > git push origin tag_name
 # undo changes
 
 In Pwd:    
-cmnd > git checkout -- file_name  
+cmnd > git checkout file_name  
 cmnd > git stash   
 cmnd > git reset --hard (reset permanently) 
 In staging :  
@@ -146,6 +152,10 @@ cmnd > git reset --hard
 
 In local repo:   
 
-cmnd > git revert commit_id
-cmnd > git checkout commit_id file_name
-cmnd > git reset commit_id file_name
+cmnd > git reset HEAD~1 (will remove one commit and changes will be in pwd)   
+cmnd > git reset --soft (will keep changes in staging area)  
+cmnd > git reset --hard (will remove all changes)  
+
+In remote:  
+
+cmnd> git revert commit_id
