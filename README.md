@@ -102,7 +102,8 @@ cmnd > git pull
 Upstream and downstream 
 cmnd > git remote -v 
 cmnd > git push --set-upstream origin master
-
+rebase with latest commit
+cmnd > git rebase branch_name
  
 # Tags
 
@@ -122,3 +123,29 @@ cmnd > git show tag_name
 
 push tag details  
 cmnd > git push origin tag_name    
+
+
+# undo changes
+
+In Pwd:    
+cmnd > git checkout -- file_name  
+cmnd > git stash   
+cmnd > git reset --hard (reset permanently) 
+In staging :  
+
+To discard all local changes. but save them for later  
+cmnd > git stash   
+To unstage but keep change   
+cmnd > git restore --staged file_name  
+To unsatge everything, but keep your changes    
+cmnd > git reset   
+unstage the file to current commit   
+cmnd > git reset HEAD file_name   
+discard everyting permanently   
+cmnd > git reset --hard  
+
+In local repo:   
+
+cmnd > git revert commit_id
+cmnd > git checkout commit_id file_name
+cmnd > git reset commit_id file_name
