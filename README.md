@@ -79,3 +79,21 @@ cmnd > git push
 Update local repository to the newest commit (remembered branch)     
 cmnd > git pull    	
  
+# Tags
+
+Git has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points    
+
+Git supports two types of tags: lightweight and annotated.    
+
+A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit.    
+cmnd > git tag v1.0.0   
+
+Annotated tags, however, are stored as full objects in the Git database.   
+
+cmnd > git tag -a v1.0.0 -m "msg"   
+
+show tag details   
+cmnd > git show tag_name   
+
+push tag details  
+cmnd > git push origin tag_name    
