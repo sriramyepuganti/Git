@@ -46,9 +46,9 @@ cmnd >  git branch -d [branch name]
 Delete a remote branch   
 cmnd > git push origin --delete [branch name]  
 Create a new branch and switch to it   
-cmnd > git checkout -b [branch name]	  
+cmnd > git checkout -b [branch name]  	  
 Clone a remote branch and switch to it   
-cmnd > git checkout -b [branch name] origin/[branch name]  
+cmnd > git checkout -b [branch name] origin/[branch name]   
 Rename a local branch   
 cmnd > git branch -m [old branch name] [new branch name]   
 Switch to a branch    
@@ -57,7 +57,7 @@ Switch to the branch last checked out
 cmnd > git checkout -       	
 Merge a branch into the active branch   
 cmnd > git merge [branch name]     
-Merge a branch into a target branch     
+Merge a branch into a target branch        
 cmnd > git merge [source branch] [target branch]    	
 Stash changes in a dirty working directory    
 cmnd > git stash	 
@@ -65,3 +65,17 @@ get stashed changes
 cmnd > git stash pop      
 Remove all stashed entries   
 cmnd > git stash clear	   
+
+# sharing and updating
+
+Pull changes from remote repository   
+cmnd > git pull origin [branch name]	
+Push a branch to your remote repository     
+cmnd > git push origin [branch name]	 
+Push changes to remote repository (and remember the branch)   
+cmnd > git push -u origin [branch name]	   
+Push changes to remote repository (remembered branch)  
+cmnd > git push    	    
+Update local repository to the newest commit (remembered branch)     
+cmnd > git pull    	
+ 
