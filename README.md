@@ -85,7 +85,7 @@ cmnd > git show
 
 logs  
 cmnd > git log  
-to check author of the code
+to check author of the code   
 git blame file_name 
 # sharing and updating
 
